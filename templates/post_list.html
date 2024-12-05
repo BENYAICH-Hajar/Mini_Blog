@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>
+    Blog Posts
+</h1>
+<ul>
+    {% for post in posts %}
+        <li>
+            {{ post.title }}
+            <a href="/post/{{ post.hajar }}/">View</a> 
+            <a href="/post/{{ post.hajar }}/edit/">Edit</a> 
+            <a href="/post/{{ post.hajar }}/delete/">Delete</a>
+        </li>
+    {% endfor %}
+</ul>
+<a href="/post/create/"> Create a New Post </a>
+{% endblock %}
